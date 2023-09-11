@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <script>
+      let elems = document.querySelectorAll("p");
+
+      for (let elem of elems) {
+        elem.addEventListener("click", function () {
+          let currentValue = parseInt(this.textContent);
+          this.textContent = (currentValue + 1).toString();
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p id="paragraph"><b>Это жирный текст</b></p>
+    <button id="button">Прочитать HTML код</button>
+
+    <script>
+      let paragraph = document.querySelector("#paragraph");
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        console.log(paragraph.innerHTML);
+      });
+    </script>
+  </body>
+</html>

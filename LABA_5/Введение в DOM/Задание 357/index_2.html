@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <script>
+      let paragraphs = document.querySelectorAll("p");
+
+      function func() {
+        const currentValue = parseInt(this.textContent);
+        if (!isNaN(currentValue)) {
+          this.textContent = currentValue * currentValue;
+        }
+      }
+
+      paragraphs.forEach(function (paragraph) {
+        paragraph.addEventListener("click", func);
+      });
+    </script>
+  </body>
+</html>

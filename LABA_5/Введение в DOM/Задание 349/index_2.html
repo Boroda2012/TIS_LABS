@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input id="inputField" type="text" value="Исходный текст" />
+    <p id="outputParagraph">Текст будет отображен здесь</p>
+    <button id="button">Записать в абзац</button>
+
+    <script>
+      let inputField = document.querySelector("#inputField");
+      let outputParagraph = document.querySelector("#outputParagraph");
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        outputParagraph.textContent = inputField.value;
+      });
+    </script>
+  </body>
+</html>

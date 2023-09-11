@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <button id="incrementButton">1</button>
+
+    <script>
+      let button = document.querySelector("#incrementButton");
+
+      function incrementValue() {
+        let currentValue = parseInt(button.textContent);
+        if (currentValue < 10) {
+          currentValue++;
+          button.textContent = currentValue;
+        } else {
+          button.removeEventListener("click", incrementValue);
+        }
+      }
+
+      button.addEventListener("click", incrementValue);
+    </script>
+  </body>
+</html>

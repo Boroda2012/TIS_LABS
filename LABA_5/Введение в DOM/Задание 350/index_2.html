@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input id="elem" value="" />
+    <div id="result"></div>
+
+    <script>
+      let elem = document.querySelector("#elem");
+      let resultDiv = document.querySelector("#result");
+
+      elem.addEventListener("blur", function () {
+        const inputValue = parseFloat(elem.value);
+        if (!isNaN(inputValue)) {
+          const square = inputValue * inputValue;
+          resultDiv.textContent = `Квадрат числа: ${square}`;
+        } else {
+          resultDiv.textContent = "Введите корректное число.";
+        }
+      });
+    </script>
+  </body>
+</html>

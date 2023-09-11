@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <p>Абзац 3</p>
+    <button id="button">Установить текст</button>
+
+    <script>
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        let paragraphs = document.querySelectorAll("p");
+
+        paragraphs.forEach(function (paragraph) {
+          paragraph.textContent = "text";
+        });
+      });
+    </script>
+  </body>
+</html>

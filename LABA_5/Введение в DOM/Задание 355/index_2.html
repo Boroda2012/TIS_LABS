@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input type="text" class="number-input" />
+    <input type="text" class="number-input" />
+    <input type="text" class="number-input" />
+
+    <script>
+      let numberInputs = document.querySelectorAll(".number-input");
+
+      numberInputs.forEach(function (input) {
+        input.addEventListener("blur", function () {
+          const inputValue = parseFloat(this.value);
+          if (!isNaN(inputValue)) {
+            this.value = inputValue * inputValue;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

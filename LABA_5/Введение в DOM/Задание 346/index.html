@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p id="paragraph">Это текст абзаца</p>
+    <button id="button">Прочитать текст</button>
+
+    <script>
+      let paragraph = document.querySelector("#paragraph");
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        console.log(paragraph.textContent);
+      });
+    </script>
+  </body>
+</html>

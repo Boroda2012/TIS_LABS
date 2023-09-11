@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p id="paragraph">Исходный текст абзаца</p>
+    <button id="button">Сделать текст жирным</button>
+
+    <script>
+      let paragraph = document.querySelector("#paragraph");
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        paragraph.innerHTML = "<b>Новый жирный текст</b>";
+      });
+    </script>
+  </body>
+</html>

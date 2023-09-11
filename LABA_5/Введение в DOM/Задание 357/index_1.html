@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input type="text" class="number-input" />
+    <input type="text" class="number-input" />
+    <input type="text" class="number-input" />
+
+    <script>
+      let numberInputs = document.querySelectorAll(".number-input");
+
+      function func() {
+        this.value = Number(this.value) + 1;
+      }
+
+      numberInputs.forEach(function (input) {
+        input.addEventListener("blur", func);
+      });
+    </script>
+  </body>
+</html>

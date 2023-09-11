@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div id="elem" class="content no-gap"></div>
+    <button id="readButton">Прочитать класс</button>
+
+    <script>
+      let elem = document.querySelector("#elem");
+      let readButton = document.querySelector("#readButton");
+
+      readButton.addEventListener("click", function () {
+        const classValue = elem.className;
+        alert(`Значение атрибута class: ${classValue}`);
+      });
+    </script>
+  </body>
+</html>

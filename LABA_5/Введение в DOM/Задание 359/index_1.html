@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <a id="link" href="https://example.com">Ссылка</a>
+    <button id="button">Добавить href</button>
+
+    <script>
+      let link = document.querySelector("#link");
+      let button = document.querySelector("#button");
+
+      function addHref() {
+        link.textContent += ` (${link.getAttribute("href")})`;
+        button.removeEventListener("click", addHref);
+      }
+
+      button.addEventListener("click", addHref);
+    </script>
+  </body>
+</html>

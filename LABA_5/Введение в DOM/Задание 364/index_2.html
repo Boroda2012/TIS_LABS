@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input id="input1" type="text" />
+    <input id="input2" type="text" />
+    <input id="input3" type="text" />
+    <button id="button">Сумма</button>
+    <p id="result">Сумма чисел:</p>
+
+    <script>
+      let input1 = document.querySelector("#input1");
+      let input2 = document.querySelector("#input2");
+      let input3 = document.querySelector("#input3");
+      let button = document.querySelector("#button");
+      let result = document.querySelector("#result");
+
+      button.addEventListener("click", function () {
+        let num1 = parseFloat(input1.value);
+        let num2 = parseFloat(input2.value);
+        let num3 = parseFloat(input3.value);
+
+        let sum = num1 + num2 + num3;
+
+        result.textContent = "Сумма чисел: " + sum;
+      });
+    </script>
+  </body>
+</html>

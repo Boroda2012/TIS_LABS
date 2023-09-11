@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <button id="incrementButton">1</button>
+
+    <script>
+      let button = document.querySelector("#incrementButton");
+
+      button.addEventListener("click", function () {
+        let currentValue = parseInt(this.textContent);
+        currentValue += 1;
+        this.textContent = currentValue;
+      });
+    </script>
+  </body>
+</html>

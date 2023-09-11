@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input id="input" type="text" />
+    <p id="paragraph">Текст:</p>
+
+    <script>
+      let input = document.querySelector("#input");
+      let paragraph = document.querySelector("#paragraph");
+
+      input.addEventListener("blur", function () {
+        paragraph.textContent += input.value;
+      });
+    </script>
+  </body>
+</html>

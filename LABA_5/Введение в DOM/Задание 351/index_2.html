@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div id="elem"></div>
+    <button id="setClassButton">Установить класс</button>
+
+    <script>
+      let elem = document.querySelector("#elem");
+      let setClassButton = document.querySelector("#setClassButton");
+
+      setClassButton.addEventListener("click", function () {
+        elem.className = "new-class";
+      });
+    </script>
+  </body>
+</html>

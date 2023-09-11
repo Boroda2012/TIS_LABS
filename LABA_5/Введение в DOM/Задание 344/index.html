@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p id="elem1">text</p>
+    <p id="elem2">text</p>
+    <p id="elem3">text</p>
+    <p id="elem4">text</p>
+    <p id="elem5">text</p>
+
+    <script>
+      let paragraphs = document.querySelectorAll("p");
+
+      function func() {
+        console.log("message");
+      }
+
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].addEventListener("click", func);
+      }
+    </script>
+  </body>
+</html>

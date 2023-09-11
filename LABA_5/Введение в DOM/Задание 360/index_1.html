@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <p>Абзац 3</p>
+
+    <script>
+      let paragraphs = document.querySelectorAll("p");
+
+      function addExclamationMark() {
+        this.textContent += "!";
+        this.removeEventListener("click", addExclamationMark);
+      }
+
+      paragraphs.forEach(function (paragraph) {
+        paragraph.addEventListener("click", addExclamationMark);
+      });
+    </script>
+  </body>
+</html>

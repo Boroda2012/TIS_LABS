@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <p>Абзац 3</p>
+    <button id="button">Добавить номера</button>
+
+    <script>
+      let button = document.querySelector("#button");
+
+      button.addEventListener("click", function () {
+        let paragraphs = document.querySelectorAll("p");
+
+        paragraphs.forEach(function (paragraph, index) {
+          paragraph.textContent = paragraph.textContent + " " + (index + 1);
+        });
+      });
+    </script>
+  </body>
+</html>
