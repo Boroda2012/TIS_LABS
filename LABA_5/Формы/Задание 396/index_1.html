@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="textArea"></textarea>
+    <p id="outputParagraph"></p>
+    <script>
+      var textArea = document.getElementById("textArea");
+      var outputParagraph = document.getElementById("outputParagraph");
+
+      textArea.addEventListener("blur", function () {
+        outputParagraph.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>

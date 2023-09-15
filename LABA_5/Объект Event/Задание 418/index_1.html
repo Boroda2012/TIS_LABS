@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получение нажатых клавиш и их кодов</title>
+</head>
+<body>
+    <input id="input" type="text" placeholder="Нажмите клавиши...">
+
+    <div>
+        <p>Нажатая клавиша: <span id="pressedKey"></span></p>
+        <p>Код клавиши: <span id="keyCode"></span></p>
+    </div>
+
+    <script>
+        const inputElement = document.getElementById('input');
+        const pressedKeyElement = document.getElementById('pressedKey');
+        const keyCodeElement = document.getElementById('keyCode');
+
+        inputElement.addEventListener('keypress', function(event) {
+            const pressedKey = event.key;
+            const keyCode = event.code;
+
+            pressedKeyElement.textContent = pressedKey;
+            keyCodeElement.textContent = keyCode;
+        });
+    </script>
+</body>
+</html>

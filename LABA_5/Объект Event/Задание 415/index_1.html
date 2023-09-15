@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отображение координат курсора</title>
+  </head>
+  <body>
+    <p>Координаты курсора: <span id="coordinates"></span></p>
+
+    <script>
+      const coordinatesElement = document.getElementById("coordinates");
+
+      function updateCoordinates(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        coordinatesElement.textContent = `X: ${x}, Y: ${y}`;
+      }
+
+      document.addEventListener("mousemove", updateCoordinates);
+    </script>
+  </body>
+</html>

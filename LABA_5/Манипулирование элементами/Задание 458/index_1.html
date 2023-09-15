@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ul = document.querySelector("#elem");
+
+      let startLi = document.createElement("li");
+      startLi.textContent = "start";
+
+      let finishLi = document.createElement("li");
+      finishLi.textContent = "finish";
+
+      ul.prepend(startLi);
+      ul.append(finishLi);
+    </script>
+  </body>
+</html>

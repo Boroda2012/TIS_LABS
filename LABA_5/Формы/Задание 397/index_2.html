@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <button id="blockButton">Заблокировать</button>
+    <button id="unblockButton">Отблокировать</button>
+
+    <script>
+      var input = document.getElementById("input");
+      var blockButton = document.getElementById("blockButton");
+      var unblockButton = document.getElementById("unblockButton");
+
+      blockButton.addEventListener("click", function () {
+        input.disabled = true;
+      });
+
+      unblockButton.addEventListener("click", function () {
+        input.disabled = false;
+      });
+    </script>
+  </body>
+</html>

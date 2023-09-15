@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="radioGroup" value="Option 1" id="option1" />
+    <input type="radio" name="radioGroup" value="Option 2" id="option2" />
+    <input type="radio" name="radioGroup" value="Option 3" id="option3" />
+    <p id="resultParagraph"></p>
+    <button id="submitButton">Показать выбор</button>
+
+    <script>
+      var radios = document.querySelectorAll('input[type="radio"]');
+      var resultParagraph = document.getElementById("resultParagraph");
+      var submitButton = document.getElementById("submitButton");
+
+      submitButton.addEventListener("click", function () {
+        for (var i = 0; i < radios.length; i++) {
+          if (radios[i].checked) {
+            resultParagraph.textContent = radios[i].value;
+            break;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

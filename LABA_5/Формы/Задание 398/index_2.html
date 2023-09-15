@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="checkBox" />
+    <button id="actionButton">Выполнить действие</button>
+    <p id="resultParagraph"></p>
+
+    <script>
+      var checkBox = document.getElementById("checkBox");
+      var actionButton = document.getElementById("actionButton");
+      var resultParagraph = document.getElementById("resultParagraph");
+
+      actionButton.addEventListener("click", function () {
+        if (checkBox.checked) {
+          resultParagraph.textContent = "привет";
+        } else {
+          resultParagraph.textContent = "пока";
+        }
+      });
+    </script>
+  </body>
+</html>

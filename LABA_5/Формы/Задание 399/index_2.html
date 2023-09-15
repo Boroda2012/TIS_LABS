@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="checkBox" />
+    <button id="toggleButton">Сменить состояние</button>
+
+    <script>
+      var checkBox = document.getElementById("checkBox");
+      var toggleButton = document.getElementById("toggleButton");
+
+      toggleButton.addEventListener("click", function () {
+        checkBox.checked = !checkBox.checked;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="increaseButton">Увеличить</button>
+    <p id="numberParagraph">0</p>
+
+    <script>
+      let increaseButton = document.querySelector("#increaseButton");
+      let numberParagraph = document.querySelector("#numberParagraph");
+      let counter = 0;
+
+      increaseButton.addEventListener("click", function () {
+        setInterval(function () {
+          counter++;
+          numberParagraph.textContent = counter;
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

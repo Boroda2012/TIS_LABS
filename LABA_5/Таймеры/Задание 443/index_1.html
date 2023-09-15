@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let count = 100; // начальное значение переменной
+
+      const timer = setInterval(function () {
+        count--;
+        console.log(count);
+
+        if (count === 0) {
+          clearInterval(timer); // останавливаем таймер, когда count достигнет 0
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

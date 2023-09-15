@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="elem1">
+      <button id="elem2">Нажми меня</button>
+    </div>
+
+    <script>
+      const elem1 = document.querySelector("#elem1");
+      const elem2 = document.querySelector("#elem2");
+
+      elem1.addEventListener("click", function () {
+        alert("Событие всплывает от elem2 до elem1");
+      });
+
+      elem2.addEventListener("click", function () {
+        alert("Событие сначала срабатывает на elem2");
+      });
+
+      //  blur не будет всплывать
+    </script>
+  </body>
+</html>

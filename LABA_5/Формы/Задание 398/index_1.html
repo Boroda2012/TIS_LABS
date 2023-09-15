@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="checkBox" />
+    <button id="checkButton">Отметить</button>
+    <button id="uncheckButton">Снять отметку</button>
+
+    <script>
+      var checkBox = document.getElementById("checkBox");
+      var checkButton = document.getElementById("checkButton");
+      var uncheckButton = document.getElementById("uncheckButton");
+
+      checkButton.addEventListener("click", function () {
+        checkBox.checked = true;
+      });
+
+      uncheckButton.addEventListener("click", function () {
+        checkBox.checked = false;
+      });
+    </script>
+  </body>
+</html>

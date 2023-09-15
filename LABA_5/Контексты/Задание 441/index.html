@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="elem" value="привет" />
+    <script>
+      let elem = document.getElementById("elem");
+
+      function func(name, surname) {
+        console.log(this.value + ", " + name + " " + surname);
+      }
+
+      func = func.bind(elem);
+
+      func("John", "Smit");
+      func("Eric", "Luis");
+    </script>
+  </body>
+</html>

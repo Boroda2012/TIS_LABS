@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="startCountdown">Start Countdown</button>
+
+    <script>
+      let startButton = document.querySelector("#startCountdown");
+      let isTimerRunning = false;
+
+      startButton.addEventListener("click", function () {
+        if (!isTimerRunning) {
+          let i = 100;
+
+          function countdown() {
+            console.log(i);
+            if (i === 0) {
+              clearInterval(timerId);
+              isTimerRunning = false;
+            } else {
+              i--;
+            }
+          }
+
+          countdown();
+
+          let timerId = setInterval(countdown, 1000);
+          isTimerRunning = true;
+        }
+      });
+    </script>
+  </body>
+</html>

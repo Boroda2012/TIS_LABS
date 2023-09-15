@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="decreaseButton">Уменьшить</button>
+    <p id="numberParagraph">10</p>
+
+    <script>
+      let decreaseButton = document.querySelector("#decreaseButton");
+      let numberParagraph = document.querySelector("#numberParagraph");
+      let counter = 10;
+
+      decreaseButton.addEventListener("click", function () {
+        let timerId = setInterval(function () {
+          if (counter > 0) {
+            counter--;
+            numberParagraph.textContent = counter;
+          } else {
+            clearInterval(timerId);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

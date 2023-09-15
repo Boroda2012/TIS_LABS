@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="elem" maxlength="5" />
+    <p id="message"></p>
+
+    <script>
+      let elem = document.querySelector("#elem");
+      let message = document.querySelector("#message");
+
+      elem.addEventListener("input", function () {
+        let maxLength = parseInt(this.getAttribute("maxlength"));
+        let remainingChars = maxLength - this.value.length;
+
+        if (remainingChars >= 0) {
+          message.textContent = `Осталось ввести ${remainingChars} символов`;
+        } else {
+          message.textContent = `Превышено на ${Math.abs(
+            remainingChars
+          )} символов`;
+        }
+      });
+    </script>
+  </body>
+</html>
